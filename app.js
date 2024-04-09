@@ -11,6 +11,9 @@ app.use(cors());
 
 // Sử dụng folderRoutes cho tất cả các yêu cầu gửi tới "/api"
 app.use('/api', folderRoutes);
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
 // Bắt đầu lắng nghe trên port chỉ định
 app.listen(port, () => {
